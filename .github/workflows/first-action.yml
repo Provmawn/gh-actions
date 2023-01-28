@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: print greeting
-        run: echo "hello world"
+        run: |
+          echo "hello world"
+          echo "here is another line"
       - name: print goodbye
         run: echo "goodbye"
