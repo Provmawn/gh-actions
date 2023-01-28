@@ -1,0 +1,14 @@
+name: Test Project
+on: push
+jobs: 
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install golang
+        uses: actions/setup-go@v3
+      - name: Test
+        run: go test
+      - name: Build
+        run: go build .
